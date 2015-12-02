@@ -32,10 +32,6 @@ public class EntryComponentUI {
 
     @Bind(R.id.text_entry)
     EditText textEntry;
-    @Bind(R.id.scan_entry)
-    Button cameraButton;
-    @Bind(R.id.search_entry)
-    Button searchButton;
     @Bind(R.id.entry_validationInProgress)
     ProgressBar validationInProgress;
 
@@ -68,7 +64,6 @@ public class EntryComponentUI {
                 uiListener.onTextEnteredSomehow(editable.toString());
             }
         });
-
     }
 
     @OnClick(R.id.scan_entry)

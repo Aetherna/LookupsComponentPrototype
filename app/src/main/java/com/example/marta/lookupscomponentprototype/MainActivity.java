@@ -3,7 +3,6 @@ package com.example.marta.lookupscomponentprototype;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
@@ -13,27 +12,24 @@ import com.example.marta.lookupscomponentprototype.lookupscomponent.location.Loc
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    private Button addLookup;
+public class MainActivity extends AppCompatActivity {
 
     private LocationLookupsComponent lookupsComponent;
     private ViewGroup thisViewGroup;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        ButterKnife.bind(this);
         thisViewGroup = (ViewGroup) findViewById(R.id.content_main);
 
         setupEntry();
         setupLookups();
-        setupButton();
-
     }
 
     private void setupEntry() {
@@ -46,19 +42,14 @@ public class MainActivity extends AppCompatActivity {
         thisViewGroup.addView(lookupsComponent.getComponentView());
     }
 
-    private void setupButton() {
-        addLookup = (Button) findViewById(R.id.add_lookup_test);
-        addLookup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-                lookupsComponent.addItem(getRandom());
-            }
-        });
+    @OnClick(R.id.add_lookup_test)
+    public void addButtonLolLookup() {
+        lookupsComponent.addItem(getRandom());
     }
 
-    public LocationModel getRandom() {
+    private LocationModel getRandom() {
         LocationModel l = new LocationModel();
-        l.setName("name" + new Random().nextInt(100));
+        l.setName("RandomName" + new Random().nextInt(100));
         return l;
     }
 

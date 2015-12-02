@@ -1,4 +1,4 @@
-package com.example.marta.lookupscomponentprototype.mutientrycomponent.location;
+package com.example.marta.lookupscomponentprototype.lookupscomponent.location;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.marta.lookupscomponentprototype.R;
 
-import com.example.marta.lookupscomponentprototype.mutientrycomponent.base.LookupUIBase;
+import com.example.marta.lookupscomponentprototype.lookupscomponent.base.LookupUIBase;
 
 
 /**

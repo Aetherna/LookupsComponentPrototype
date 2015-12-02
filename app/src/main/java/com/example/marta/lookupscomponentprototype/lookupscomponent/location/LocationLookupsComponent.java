@@ -1,11 +1,8 @@
-package com.example.marta.lookupscomponentprototype.mutientrycomponent.location;
+package com.example.marta.lookupscomponentprototype.lookupscomponent.location;
 
 import android.content.Context;
-import android.view.View;
-import android.view.ViewGroup;
 
-import com.example.marta.lookupscomponentprototype.R;
-import com.example.marta.lookupscomponentprototype.mutientrycomponent.base.LookupsComponentBase;
+import com.example.marta.lookupscomponentprototype.lookupscomponent.base.LookupsComponentBase;
 
 import de.greenrobot.event.EventBus;
 

@@ -1,10 +1,10 @@
-package com.example.marta.lookupscomponentprototype.mutientrycomponent.location;
+package com.example.marta.lookupscomponentprototype.lookupscomponent.location;
 
 import android.content.Context;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.marta.lookupscomponentprototype.mutientrycomponent.base.LookupBase;
+import com.example.marta.lookupscomponentprototype.lookupscomponent.base.LookupBase;
 
 
 /**

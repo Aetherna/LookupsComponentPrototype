@@ -1,4 +1,4 @@
-package com.example.marta.lookupscomponentprototype.mutientrycomponent.location;
+package com.example.marta.lookupscomponentprototype.lookupscomponent.location;
 
 
 /**

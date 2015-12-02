@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.marta.lookupscomponentprototype.entrycomponent.location.LocationEntry;
-import com.example.marta.lookupscomponentprototype.mutientrycomponent.location.LocationLookupsComponent;
-import com.example.marta.lookupscomponentprototype.mutientrycomponent.location.LocationModel;
+import com.example.marta.lookupscomponentprototype.lookupscomponent.location.LocationLookupsComponent;
+import com.example.marta.lookupscomponentprototype.lookupscomponent.location.LocationModel;
 
 import java.util.Random;
 

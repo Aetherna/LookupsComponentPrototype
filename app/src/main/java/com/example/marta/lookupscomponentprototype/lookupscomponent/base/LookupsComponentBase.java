@@ -1,4 +1,4 @@
-package com.example.marta.lookupscomponentprototype.mutientrycomponent.base;
+package com.example.marta.lookupscomponentprototype.lookupscomponent.base;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,8 +9,6 @@ import com.example.marta.lookupscomponentprototype.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import de.greenrobot.event.EventBus;
 
 /**
  * Created by Marta on 30/11/2015.

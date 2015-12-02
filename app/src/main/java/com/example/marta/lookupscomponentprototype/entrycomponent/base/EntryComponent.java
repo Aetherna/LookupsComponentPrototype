@@ -7,7 +7,6 @@ import java.util.concurrent.TimeUnit;
 
 import de.greenrobot.event.EventBus;
 import rx.Observable;
-import rx.Scheduler;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
@@ -28,10 +27,9 @@ public abstract class EntryComponent<T> implements EntryComponentUIListener {
 
         entryComponentUI.showValidationInProgress();
 
-        if (ob != null && !ob.isUnsubscribed()) {// cancel previous task if running
+        if (ob != null && !ob.isUnsubscribed()) {
             ob.unsubscribe();
         }
-
         ob = Observable.just(findSuchItem(textValue))
                 .delay(1, TimeUnit.SECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -39,16 +37,23 @@ public abstract class EntryComponent<T> implements EntryComponentUIListener {
                     @Override
                     public void call(T item) {
 
-                        if (item != null) {
+                        if (validateItem(item)) {
                             EventBus.getDefault().post(item);
-                            entryComponentUI.hideValidation();
-
-                        } else {
-                            entryComponentUI.showValidationError("No such item :<");
                         }
-                        entryComponentUI.hideValidation();
                     }
                 });
+    }
+
+    private boolean validateItem(final T item) {
+        boolean result = false;
+
+        if (item != null) {
+            result = true;
+        } else {
+            entryComponentUI.showValidationError("No such item :<");
+        }
+        entryComponentUI.hideValidation();
+        return result;
     }
 
     protected abstract T findSuchItem(String textValue);

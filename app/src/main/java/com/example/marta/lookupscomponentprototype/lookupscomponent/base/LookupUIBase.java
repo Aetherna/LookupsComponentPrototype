@@ -1,4 +1,4 @@
-package com.example.marta.lookupscomponentprototype.mutientrycomponent.base;
+package com.example.marta.lookupscomponentprototype.lookupscomponent.base;
 
 import android.view.View;
 import android.view.ViewGroup;
